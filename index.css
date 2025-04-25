@@ -1,0 +1,129 @@
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/inter-v18-latin-regular.woff2') format('woff2'); 
+}
+  
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/inter-v18-latin-600.woff2') format('woff2'); 
+}
+  
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/inter-v18-latin-700.woff2') format('woff2'); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter',sans-serif;
+    color: var(--white);
+    border: 0;
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    --spacing-s: 15px;
+    --spacing-m: 24px;
+    --spacing-l: 32px; 
+}
+
+body {
+    height: 100vh;
+    background-color: var(--grey-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links-wrapper {
+    width: 320px;
+    height: 570px;
+    border-radius: 10px;
+    padding: var(--spacing-m);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--grey-800);
+}
+
+.social-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: var(--spacing-m);
+    flex-grow: 1;
+}
+
+.social-image {
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    object-fit: cover;
+}
+
+.social-name {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+    padding-top: var(--spacing-m);
+    padding-bottom: 6px;
+}
+
+.social-location {
+    color: var(--green);
+    padding-bottom: var(--spacing-m);
+}
+
+.social-location, .social-links > button {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.social-links button {
+    background-color: var(--grey-700);
+    width: 100%;
+    padding-block: var(--spacing-s);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.social-links button:hover {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (min-width: 640px) {
+    .social-links-wrapper {
+        width: 380px;
+        height: 590px;
+        padding-inline: var(--spacing-l);
+        padding-bottom: var(--spacing-l);
+    }
+}
